@@ -1,6 +1,6 @@
 # mysql-express-react-node
 
-> MySQL ( Sequelize ODM ) + Express JS + React JS ( Tailwind CSS ) + Node JS
+> MySQL ( Sequelize ODM ) + Express JS + React JS ( Tailwind CSS + Typescript ) + Node JS
 
 ### Steps to run mysql-express-react-node-backend
 
