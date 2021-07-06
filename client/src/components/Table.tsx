@@ -14,6 +14,7 @@ const CustomTable = () => {
 			updatedAt: '2021-07-03T19:57:48.000Z',
 		},
 	];
+
 	return (
 		<div className="flex flex-col p-10">
 			<div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">

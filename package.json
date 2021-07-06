@@ -28,10 +28,10 @@
 	"dependencies": {
 		"chalk": "^4.1.1",
 		"compression": "^1.7.4",
+		"concurrently": "^6.2.0",
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
-		"global": "^4.4.0",
 		"helmet": "^4.6.0",
 		"ip": "^1.1.5",
 		"morgan": "^1.10.0",
