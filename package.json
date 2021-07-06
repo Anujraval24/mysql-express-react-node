@@ -8,11 +8,13 @@
 	"scripts": {
 		"start": "yarn build && yarn prod",
 		"prod": "nodemon --exec babel-node server.js",
-		"dev": "nodemon --exec babel-node server.js",
+		"client": "cd client && yarn start",
+		"dev": "concurrently \"nodemon --exec babel-node server.js\" \"yarn client\"",
 		"build": "babel src --out-dir dist",
 		"migration": "npx sequelize-cli db:migrate",
 		"migration:rb": "npx sequelize-cli db:migrate:undo",
 		"seed": "npx sequelize-cli db:seed:all",
+		"seed:undo": "npx sequelize-cli db:seed:undo:all",
 		"db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
 	},
 	"devDependencies": {
@@ -29,10 +31,12 @@
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
+		"global": "^4.4.0",
 		"helmet": "^4.6.0",
 		"ip": "^1.1.5",
 		"morgan": "^1.10.0",
 		"mysql2": "^2.2.5",
-		"sequelize": "^6.6.4"
+		"sequelize": "^6.6.4",
+		"sequelize-cli": "^6.2.0"
 	}
 }
