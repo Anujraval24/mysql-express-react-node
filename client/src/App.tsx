@@ -1,19 +1,24 @@
-import CustomTable from './components/Table';
+import { useContext } from 'react';
+import { useQuery } from 'react-query';
+
+import { FetchContext } from './context/FetchContext';
+
+import Home from './pages/Home';
 
 const App = () => {
-	return (
-		<div className="App">
-			<header className="text-center">
-				<h1 className="px-10 py-10 bg-green-400 font-semibold font-mono text-white">
-					Hello from React + Tailwind + Typscript
-				</h1>
-			</header>
+	const fetchContext = useContext(FetchContext);
 
-			<div>
-				<CustomTable />
-			</div>
-		</div>
-	);
+	const getUsers = async () => {
+		try {
+			const { data } = await fetchContext.authAxios.get('users');
+			return data?.data;
+		} catch (error) {
+			console.log(`error?.response	`, error?.response);
+		}
+	};
+	const { isLoading, error, data } = useQuery('users', getUsers);
+
+	return <Home state={{ isLoading, data, error }} />;
 };
 
 export default App;
