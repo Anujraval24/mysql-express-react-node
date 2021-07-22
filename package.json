@@ -6,9 +6,9 @@
 	"author": "Anuj Raval <anujraval24@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "yarn build && yarn prod",
+		"start": "npm run build && npm run prod",
 		"prod": "nodemon --exec babel-node server.js",
-		"client": "cd client && yarn start",
+		"client": "cd client && npm run start",
 		"server": "nodemon --exec babel-node server.js",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
 		"build": "babel src --out-dir dist",
