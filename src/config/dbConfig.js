@@ -12,7 +12,7 @@ module.exports = {
 	development: {
 		username: MYSQL_DATABASE_USERNAME,
 		password: MYSQL_DATABASE_PASSWORD,
-		database: MYSQL_DATABASE_NAME + '_' + DB_ENV,
+		database: MYSQL_DATABASE_NAME,
 		host: MYSQL_DATABASE_HOST,
 		port: MYSQL_DATABASE_PORT,
 		dialect: MYSQL_DATABASE_DIALECT,
@@ -20,7 +20,7 @@ module.exports = {
 	test: {
 		username: MYSQL_DATABASE_USERNAME,
 		password: MYSQL_DATABASE_PASSWORD,
-		database: MYSQL_DATABASE_NAME + '_' + DB_ENV,
+		database: MYSQL_DATABASE_NAME,
 		host: MYSQL_DATABASE_HOST,
 		port: MYSQL_DATABASE_PORT,
 		dialect: MYSQL_DATABASE_DIALECT,
@@ -28,7 +28,7 @@ module.exports = {
 	production: {
 		username: MYSQL_DATABASE_USERNAME,
 		password: MYSQL_DATABASE_PASSWORD,
-		database: MYSQL_DATABASE_NAME + '_' + DB_ENV,
+		database: MYSQL_DATABASE_NAME,
 		host: MYSQL_DATABASE_HOST,
 		port: MYSQL_DATABASE_PORT,
 		dialect: MYSQL_DATABASE_DIALECT,

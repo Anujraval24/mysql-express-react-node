@@ -4,8 +4,9 @@ import mysql from 'mysql2/promise';
 
 require('dotenv').config({ path: 'src/config/.env' });
 /* Environment Config */
-const DB_ENV = process.env.DB_ENV;
-const MYSQL_DATABASE_NAME = process.env.MYSQL_DATABASE_NAME + '_' + DB_ENV;
+// const DB_ENV = process.env.DB_ENV;
+// const MYSQL_DATABASE_NAME = process.env.MYSQL_DATABASE_NAME + '_' + DB_ENV;
+const MYSQL_DATABASE_NAME = process.env.MYSQL_DATABASE_NAME;
 const MYSQL_DATABASE_USERNAME = process.env.MYSQL_DATABASE_USERNAME;
 const MYSQL_DATABASE_PASSWORD = process.env.MYSQL_DATABASE_PASSWORD;
 const MYSQL_DATABASE_HOST = process.env.MYSQL_DATABASE_HOST;
